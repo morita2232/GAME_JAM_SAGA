@@ -1,0 +1,147 @@
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+
+public class ComidaManager : MonoBehaviour
+{
+    public List<GameObject> foods;      // Food prefab GameObjects
+    public Transform foodSpawn;
+    public Player player;
+
+    public TextMeshProUGUI scoreVisual;
+
+    private float timer;
+
+    public bool canSpawnNext = true;
+    public float spawnInterval = 5f;
+
+    private float spawnTimer = 0f;
+    private Comida currentFoodInstance;
+
+    private void Start()
+    {
+        timer = 20;
+    }
+    void Update()
+    {
+       if (timer > 0)
+        {
+
+            timer -= Time.deltaTime;
+
+            HandleInput();
+
+            HandleSpawning();
+
+        }
+        else{
+            Debug.Log("ADEU");
+        }
+    }
+
+    void HandleSpawning()
+    {
+        if (!canSpawnNext || currentFoodInstance != null)
+            return;
+
+        spawnTimer += Time.deltaTime;
+
+        if (spawnTimer >= spawnInterval)
+        {
+            spawnTimer = 0f;
+            SpawnRandomFood();
+        }
+    }
+
+    void HandleInput()
+    {
+        if (currentFoodInstance == null) return;
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Debug.Log("Has tirado");
+            if (currentFoodInstance.catalan)
+            {
+                player.money -= currentFoodInstance.points;
+
+            }
+            else
+            {
+                player.money += currentFoodInstance.points;
+            }
+
+            if(player.money < 0)
+            {
+                player.money = 0;
+            }
+            scoreVisual.SetText("Score: " + player.money);
+            NextFood();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("Has comido");
+            player.money += currentFoodInstance.points;
+            scoreVisual.SetText("Score: " + player.money);
+            NextFood();
+        }
+    }
+
+    void SpawnRandomFood()
+    {
+        if (foods == null || foods.Count == 0)
+        {
+            Debug.LogWarning("No foods assigned in ComidaManager.");
+            return;
+        }
+
+        int index = Random.Range(0, foods.Count);
+        GameObject prefabGO = foods[index];
+
+        if (prefabGO == null)
+        {
+            Debug.LogError("foods[" + index + "] is null!");
+            return;
+        }
+
+        // Get the Comida script ON the prefab
+        Comida prefab = prefabGO.GetComponent<Comida>();
+        if (prefab == null)
+        {
+            Debug.LogError("Food prefab " + prefabGO.name + " has NO Comida script!");
+            return;
+        }
+
+        if (!prefab.unlocked)
+        {
+            Debug.Log("Chosen food is locked, skipping spawn.");
+            return;
+        }
+
+        Debug.Log("Spawning food: " + prefabGO.name);
+
+        // Spawn the prefab
+        GameObject instanceGO = Instantiate(prefabGO, foodSpawn.position, Quaternion.identity);
+
+        // Get Comida on the spawned instance
+        currentFoodInstance = instanceGO.GetComponent<Comida>();
+        currentFoodInstance.alive = true;
+
+        canSpawnNext = false;
+    }
+
+    void NextFood()
+    {
+        if (currentFoodInstance != null)
+        {
+            currentFoodInstance.alive = false;
+            Destroy(currentFoodInstance.gameObject);
+            currentFoodInstance = null;
+        }
+
+        canSpawnNext = true;
+        spawnTimer = 0f;
+    }
+}
+
+
