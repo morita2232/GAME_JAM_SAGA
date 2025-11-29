@@ -10,15 +10,38 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);  // <-- key line
+        }
+        else
+        {
+            Destroy(gameObject);           // destroy duplicates in later scenes
+            return;
+        }
     }
 
     private void Start()
     {
+
+        SyncFromPlayer();
         UpdateUI();
     }
 
+    private void Update()
+    {
+        if (uiCoins == null)
+        {
+            GameObject coinUI = GameObject.FindGameObjectWithTag("Coins");
+
+            if (coinUI != null)
+            {
+                uiCoins = coinUI.GetComponent<TextMeshProUGUI>();
+                UpdateUI();
+            }
+        }
+    }
     public bool TrySpend(int amount)
     {
         if (coins >= amount)
@@ -37,8 +60,23 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
+    private void SyncFromPlayer()
+    {
+        Player player = FindAnyObjectByType<Player>();
+
+        if (player != null)
+        {
+            coins = player.money;
+        }
+    }
+
+
     private void UpdateUI()
     {
-        uiCoins.text = $"{coins}";
+        if (uiCoins != null)
+        {
+            uiCoins.text = $"{coins}";
+        }
     }
 }
+

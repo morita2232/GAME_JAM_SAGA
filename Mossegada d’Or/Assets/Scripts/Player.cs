@@ -6,13 +6,20 @@ public class Player : MonoBehaviour
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+        void Start()
+        {
+            if (GameManager.Instance != null)
+            {
+                money = GameManager.Instance.coins;   // sync from GameManager
+            }
+            else
+            {
+                Debug.LogWarning("GameManager.Instance is null in Player.Start!");
+            }
+        }
 
-    }
-
-    // Update is called once per frame
-    void Update()
+        // Update is called once per frame
+        void Update()
     {
 
         

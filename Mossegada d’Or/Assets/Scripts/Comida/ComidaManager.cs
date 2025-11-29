@@ -29,8 +29,14 @@ public class ComidaManager : MonoBehaviour
 
     private void Start()
     {
-        timer = 60;
+        timer = 15;
         audioSource = GetComponent<AudioSource>();
+
+        if (GameManager.Instance != null && player != null)
+        {
+            player.money = GameManager.Instance.coins;
+            scoreVisual.SetText("Puntuació: " + player.money);
+        }
 
     }
     void Update()
@@ -55,8 +61,15 @@ public class ComidaManager : MonoBehaviour
             }
             else
             {
+                // Sync player money into GameManager coins BEFORE leaving the scene
+                if (GameManager.Instance != null && player != null)
+                {
+                    GameManager.Instance.coins = player.money;
+                }
+
                 SceneManager.LoadScene("GamblingScene");
             }
+
         }
     }
 
@@ -86,16 +99,16 @@ public class ComidaManager : MonoBehaviour
             Debug.Log("Has tirado");
             if (currentFoodInstance.catalan)
             {
-                audioSource.PlayOneShot(wrongSound);
+                audioSource.PlayOneShot(correctSound);
 
-                player.money -= currentFoodInstance.points;
+                player.money += currentFoodInstance.points;
 
             }
             else if (!currentFoodInstance.catalan)
             {
-                audioSource.PlayOneShot(correctSound);
+                audioSource.PlayOneShot(wrongSound);
 
-                player.money += currentFoodInstance.points;
+                player.money -= currentFoodInstance.points;
             }
 
             if(player.money < 0)
@@ -115,12 +128,12 @@ public class ComidaManager : MonoBehaviour
            
             if (currentFoodInstance.catalan)
             {
-                audioSource.PlayOneShot(correctSound);
+                audioSource.PlayOneShot(wrongSound);
 
             }
             else if (!currentFoodInstance.catalan)
             {
-                audioSource.PlayOneShot(wrongSound);
+                audioSource.PlayOneShot(correctSound);
             }
            
             if (player.money < 0)

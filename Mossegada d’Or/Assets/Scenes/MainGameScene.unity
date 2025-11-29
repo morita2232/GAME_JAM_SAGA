@@ -1104,6 +1104,95 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1001 &489920530
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2170106298179053324, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579022068670697191, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972971477950781873, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416658483740518574, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416658483740518574, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: musicTrack
+      value: 
+      objectReference: {fileID: 8300000, guid: d114922213d9f6044a0760ff0c10d02a, type: 3}
+    - target: {fileID: 4416658483740518574, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: gamblingMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 09e2855fe5c83ca468093a50351bdedb, type: 3}
+    - target: {fileID: 4416658483740518574, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: gameplayMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: d114922213d9f6044a0760ff0c10d02a, type: 3}
+    - target: {fileID: 4416658483740518574, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: gameplaySceneName
+      value: MainGameScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582827560970171948, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 218.82185
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582827560970171948, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 126.5027
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582827560970171948, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.0670576
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582827560970171948, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582827560970171948, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582827560970171948, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582827560970171948, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582827560970171948, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582827560970171948, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582827560970171948, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281120060442919732, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
+      propertyPath: coins
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd3ff899363ba014abce3161816cccc4, type: 3}
 --- !u!1 &502123926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,7 +1872,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d620fef6e4dd92b47b9f4407baa80467, type: 3}
     - target: {fileID: 2714458732634899749, guid: c32a86cf269a1aa4ab4a8be4b07e0a37, type: 3}
       propertyPath: spawnInterval
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2714458732634899749, guid: c32a86cf269a1aa4ab4a8be4b07e0a37, type: 3}
       propertyPath: foods.Array.size
@@ -2546,7 +2635,6 @@ GameObject:
   - component: {fileID: 1930141246}
   - component: {fileID: 1930141249}
   - component: {fileID: 1930141252}
-  - component: {fileID: 1930141253}
   - component: {fileID: 1930141255}
   - component: {fileID: 1930141254}
   m_Layer: 0
@@ -2771,20 +2859,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1930141253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930141245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebe4166d0769e8f43b3a1f6936d60eb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicTrack: {fileID: 8300000, guid: d114922213d9f6044a0760ff0c10d02a, type: 3}
-  volume: 0.3
 --- !u!114 &1930141254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2930,3 +3004,4 @@ SceneRoots:
   - {fileID: 1212402986}
   - {fileID: 1390721171}
   - {fileID: 2097547069}
+  - {fileID: 489920530}
