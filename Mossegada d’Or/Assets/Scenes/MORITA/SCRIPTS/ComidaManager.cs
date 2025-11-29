@@ -94,6 +94,10 @@ public class ComidaManager : MonoBehaviour
         {
             Debug.Log("Has comido");
             player.money += currentFoodInstance.points;
+            if (player.money < 0)
+            {
+                player.money = 0;
+            }
             scoreVisual.SetText("Puntuació: " + player.money);
             NextFood();
         }
