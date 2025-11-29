@@ -8,12 +8,16 @@ public class MenuManager : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private GameObject instructionsPanel;
+    [SerializeField] private GameObject creditsPanel;
 
     private void Start()
     {
         // Hide instructions when the menu loads
         if (instructionsPanel != null)
             instructionsPanel.SetActive(false);
+
+        if (creditsPanel != null)
+            creditsPanel.SetActive(false);
     }
 
     // --- BUTTON FUNCTIONS ---
@@ -29,10 +33,23 @@ public class MenuManager : MonoBehaviour
             instructionsPanel.SetActive(true);
     }
 
+    public void OpenCredits()
+    {
+        if (creditsPanel !=null) 
+            creditsPanel.SetActive(true);
+
+    }
+
     public void CloseInstructions()
     {
         if (instructionsPanel != null)
             instructionsPanel.SetActive(false);
+    }
+
+    public void CloseCredits()
+    {
+        if (creditsPanel != null)
+            creditsPanel.SetActive(false);
     }
 
     public void ExitGame()
