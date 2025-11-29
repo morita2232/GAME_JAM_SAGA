@@ -49,6 +49,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coins: 0
   uiCoins: {fileID: 0}
+  foods:
+  - {fileID: 2125807282082112357, guid: 34ab542cbea8ddf4886c61dd12aa07cc, type: 3}
+  - {fileID: 4786524769667833019, guid: 34b8690c4e4f20c4588a75fa8b9ecfb1, type: 3}
+  - {fileID: 8350483880295101905, guid: fd3f53595bbe5404586aa01ca3856df8, type: 3}
+  - {fileID: 5959452329565509558, guid: 47dbcb83e6648cb469516641d9f5d9ac, type: 3}
+  - {fileID: 8532289223609768729, guid: 87797dcbcee3e354a90208b680cbc9c7, type: 3}
 --- !u!114 &4416658483740518574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,7 +67,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebe4166d0769e8f43b3a1f6936d60eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicTrack: {fileID: 8300000, guid: 09e2855fe5c83ca468093a50351bdedb, type: 3}
+  gameplayMusic: {fileID: 0}
+  gamblingMusic: {fileID: 0}
+  gameplaySceneName: GameplayScene
+  gamblingSceneName: GamblingScene
   volume: 0.3
 --- !u!82 &2972971477950781873
 AudioSource:

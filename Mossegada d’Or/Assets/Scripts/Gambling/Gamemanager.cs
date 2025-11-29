@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,17 +8,18 @@ public class GameManager : MonoBehaviour
 
     public int coins = 100;
     public TextMeshProUGUI uiCoins;
+    public List<GameObject> foods;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);  // <-- key line
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject);           // destroy duplicates in later scenes
+            Destroy(gameObject);
             return;
         }
     }

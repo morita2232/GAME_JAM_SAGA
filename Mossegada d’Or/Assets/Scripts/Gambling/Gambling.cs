@@ -6,8 +6,10 @@ using TMPro;
 
 public class Gambling : MonoBehaviour
 {
+    [Header("GameManager")]
+    public GameManager gm; //le pasara la lista modificada a game manager
+
     [Header("Configuración")]
-    public List<Color> colores = new List<Color>();
     public GameObject[] comidas;
     public InputAction spinAction;
     public int spinCost = 10;
@@ -32,13 +34,6 @@ public class Gambling : MonoBehaviour
 
     void Start()
     {
-        if (colores.Count == 0)
-        {
-            colores.Add(Color.red);
-            colores.Add(Color.green);
-            colores.Add(Color.blue);
-        }
-
         statusText.text = $"Pren espai per girar ({spinCost} monedas)";
     }
 
@@ -68,8 +63,9 @@ public class Gambling : MonoBehaviour
         {
             for (int i = 0; i < comidas.Length; i++)
             {
-                int rand = Random.Range(0, colores.Count);
-                comidas[i].GetComponent<Renderer>().material.color = colores[rand];
+                int rand = Random.Range(0, gm.foods.Count);
+                var prefab = gm.foods[rand];
+                comidas[i].GetComponent<SpriteRenderer>().sprite = prefab.GetComponent<SpriteRenderer>().sprite;
             }
 
             timer += 0.1f;
@@ -77,35 +73,22 @@ public class Gambling : MonoBehaviour
 
         }
 
-        //Logica de si has ganado o no
-        if (AllSameColor())
+        // Elegir resultado final
+        int finalRand = Random.Range(0, gm.foods.Count);
+        GameObject result = gm.foods[finalRand];
+
+        // Desbloquear comida si no estaba desbloqueada
+        Comida comidaComp = result.GetComponent<Comida>();
+        if (comidaComp != null && !comidaComp.unlocked)
         {
-            GameManager.Instance.AddCoins(20);
-            statusText.text = $"Has guanyat +{20} monedas!";
+            comidaComp.unlocked = true;
+            statusText.text = $"Nuevo desbloqueo: {result.name}";
         }
         else
         {
-            statusText.text = "Mala sort... No has guanyat.";
+            statusText.text = $"Repetido: {result.name}";
         }
 
         isSpinning = false;
-
     }
-
-
-    bool AllSameColor()
-    {
-        Color firstColor = comidas[0].GetComponent<Renderer>().material.color;
-
-        for (int i = 1; i < comidas.Length; i++)
-        {
-            if (comidas[i].GetComponent<Renderer>().material.color != firstColor)
-            {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
 }

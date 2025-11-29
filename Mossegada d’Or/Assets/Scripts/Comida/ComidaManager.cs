@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ComidaManager : MonoBehaviour
 {
-    public List<GameObject> foods;      // Food prefab GameObjects
+    public GameManager gm;
+
+    public List<GameObject> foods;
     public Transform foodSpawn;
     public Player player;
 
@@ -29,6 +31,11 @@ public class ComidaManager : MonoBehaviour
 
     private void Start()
     {
+        if(gm != null)
+        {
+            foods = gm.foods;
+        }
+
         timer = 15;
         audioSource = GetComponent<AudioSource>();
 

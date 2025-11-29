@@ -104,5 +104,5 @@ MonoBehaviour:
   catalan: 0
   id: 0
   alive: 0
-  unlocked: 1
+  unlocked: 0
   sprite: {fileID: 0}
