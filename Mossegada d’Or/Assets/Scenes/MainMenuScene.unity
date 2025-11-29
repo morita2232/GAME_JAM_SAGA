@@ -203,9 +203,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8585112}
+      - m_Target: {fileID: 1764449225}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2417,8 +2417,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "COMEN\xC7AR"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3576,9 +3576,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1764449220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d5034f793e51c248837281d72cbdb92, type: 3}
+  m_Script: {fileID: 11500000, guid: 03a490199ab3e38429fdc4b98657de39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameplaySceneName: MainGameScene
+  instructionsPanel: {fileID: 1165519119}
+  creditsPanel: {fileID: 1484651231}
 --- !u!114 &1764449226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3588,9 +3591,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1764449220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71840965fc485c941abf8120b4219406, type: 3}
+  m_Script: {fileID: 11500000, guid: 37a8ce43814c7ce4dbbb0d4d779f65aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 716cb312b77a71941989c3b8819395b3, type: 3}
+  clickSound: {fileID: 8300000, guid: 2f1746d1b0943b741a703fcc3bdfe6f8, type: 3}
 --- !u!82 &1764449227
 AudioSource:
   m_ObjectHideFlags: 0

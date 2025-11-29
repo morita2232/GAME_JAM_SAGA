@@ -1013,9 +1013,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1930141254}
+        m_TargetAssemblyTypeName: UIAudio, Assembly-CSharp
+        m_MethodName: PlayClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1025,9 +1025,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIAudio, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1930141255}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1092,9 +1092,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1930141254}
           m_TargetAssemblyTypeName: UIAudio, Assembly-CSharp
-          m_MethodName: 
+          m_MethodName: PlayHover
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1938,7 +1938,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1930141250}
+      - m_Target: {fileID: 1930141255}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: LoadMainMenu
         m_Mode: 1
@@ -1950,7 +1950,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1930141254}
         m_TargetAssemblyTypeName: UIAudio, Assembly-CSharp
         m_MethodName: PlayClick
         m_Mode: 1
@@ -2017,7 +2017,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1930141254}
           m_TargetAssemblyTypeName: UIAudio, Assembly-CSharp
           m_MethodName: PlayHover
           m_Mode: 1
@@ -2170,7 +2170,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1930141250}
+      - m_Target: {fileID: 1930141255}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -2182,7 +2182,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1930141254}
         m_TargetAssemblyTypeName: UIAudio, Assembly-CSharp
         m_MethodName: PlayClick
         m_Mode: 1
@@ -2249,7 +2249,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1930141254}
           m_TargetAssemblyTypeName: UIAudio, Assembly-CSharp
           m_MethodName: PlayHover
           m_Mode: 1
@@ -2545,9 +2545,10 @@ GameObject:
   - component: {fileID: 1930141247}
   - component: {fileID: 1930141246}
   - component: {fileID: 1930141249}
-  - component: {fileID: 1930141250}
   - component: {fileID: 1930141252}
   - component: {fileID: 1930141253}
+  - component: {fileID: 1930141255}
+  - component: {fileID: 1930141254}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2673,24 +2674,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &1930141250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930141245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48a8f47eaac05bb44986f8e98bad31ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points: 0
-  catalan: 0
-  id: 0
-  alive: 0
-  unlocked: 0
-  sprite: {fileID: 0}
 --- !u!82 &1930141252
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2802,6 +2785,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicTrack: {fileID: 8300000, guid: d114922213d9f6044a0760ff0c10d02a, type: 3}
   volume: 0.3
+--- !u!114 &1930141254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930141245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37a8ce43814c7ce4dbbb0d4d779f65aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 716cb312b77a71941989c3b8819395b3, type: 3}
+  clickSound: {fileID: 8300000, guid: 2f1746d1b0943b741a703fcc3bdfe6f8, type: 3}
+--- !u!114 &1930141255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930141245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5862aa33b60124746bea102a0ab7ca52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 2097547065}
+  mainMenuSceneName: MainMenuScene
 --- !u!1 &2097547065
 GameObject:
   m_ObjectHideFlags: 0
