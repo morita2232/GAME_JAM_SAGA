@@ -15,5 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/MORITA/MainGame_Morita.unity
     guid: 02a1bc8a4ae69a142a7aa3e8a11722f2
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 682a50349964c63499f73d04432f1002, type: 3}
   m_UseUCBPForAssetBundles: 0
