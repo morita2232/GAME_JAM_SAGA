@@ -2808,13 +2808,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 654552985364930314, guid: 744322d075a421e4eb44fe653e55ac3e, type: 3}
     - target: {fileID: 2714458732634899749, guid: ef3fba9e7d512904d8008a4ae540019f, type: 3}
+      propertyPath: eatSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b8cd1599a4298ab4881d0a18f50d26ef, type: 3}
+    - target: {fileID: 2714458732634899749, guid: ef3fba9e7d512904d8008a4ae540019f, type: 3}
       propertyPath: foodSpawn
       value: 
       objectReference: {fileID: 706070855}
     - target: {fileID: 2714458732634899749, guid: ef3fba9e7d512904d8008a4ae540019f, type: 3}
+      propertyPath: throwSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 36d25288da868e34ea285718d40ee9a6, type: 3}
+    - target: {fileID: 2714458732634899749, guid: ef3fba9e7d512904d8008a4ae540019f, type: 3}
       propertyPath: timeVisual
       value: 
       objectReference: {fileID: 1923593485}
+    - target: {fileID: 2714458732634899749, guid: ef3fba9e7d512904d8008a4ae540019f, type: 3}
+      propertyPath: wrongSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 76506d426ff1f5e4e94e559c0afdf769, type: 3}
     - target: {fileID: 2714458732634899749, guid: ef3fba9e7d512904d8008a4ae540019f, type: 3}
       propertyPath: scoreVisual
       value: 
@@ -2823,6 +2835,10 @@ PrefabInstance:
       propertyPath: canSpawnNext
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2714458732634899749, guid: ef3fba9e7d512904d8008a4ae540019f, type: 3}
+      propertyPath: correctSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 02cc90fa6802c784cac1ddf554e324fb, type: 3}
     - target: {fileID: 2714458732634899749, guid: ef3fba9e7d512904d8008a4ae540019f, type: 3}
       propertyPath: spawnInterval
       value: 1

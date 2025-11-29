@@ -19,9 +19,18 @@ public class ComidaManager : MonoBehaviour
     private float spawnTimer = 0f;
     private Comida currentFoodInstance;
 
+    [Header("Audio Clips")]
+    public AudioClip eatSound;
+    public AudioClip throwSound;
+    public AudioClip correctSound;
+    public AudioClip wrongSound;
+    private AudioSource audioSource;
+
     private void Start()
     {
         timer = 60;
+        audioSource = GetComponent<AudioSource>();
+
     }
     void Update()
     {
@@ -71,14 +80,20 @@ public class ComidaManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            audioSource.PlayOneShot(throwSound);
+
             Debug.Log("Has tirado");
             if (currentFoodInstance.catalan)
             {
+                audioSource.PlayOneShot(wrongSound);
+
                 player.money -= currentFoodInstance.points;
 
             }
-            else
+            else if (!currentFoodInstance.catalan)
             {
+                audioSource.PlayOneShot(correctSound);
+
                 player.money += currentFoodInstance.points;
             }
 
@@ -92,8 +107,21 @@ public class ComidaManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
+            audioSource.PlayOneShot(eatSound);
+
             Debug.Log("Has comido");
             player.money += currentFoodInstance.points;
+           
+            if (currentFoodInstance.catalan)
+            {
+                audioSource.PlayOneShot(correctSound);
+
+            }
+            else if (!currentFoodInstance.catalan)
+            {
+                audioSource.PlayOneShot(wrongSound);
+            }
+           
             if (player.money < 0)
             {
                 player.money = 0;
