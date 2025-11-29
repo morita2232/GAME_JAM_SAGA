@@ -9,6 +9,7 @@ public class ComidaManager : MonoBehaviour
     public Player player;
 
     public TextMeshProUGUI scoreVisual;
+    public TextMeshProUGUI timeVisual;
 
     private float timer;
 
@@ -20,24 +21,35 @@ public class ComidaManager : MonoBehaviour
 
     private void Start()
     {
-        timer = 20;
+        timer = 60;
     }
     void Update()
     {
-       if (timer > 0)
+        // STOP all game logic if paused
+        if (PauseMenu.GameIsPaused)
         {
 
-            timer -= Time.deltaTime;
-
-            HandleInput();
-
-            HandleSpawning();
-
+            Debug.Log("PAUSED");
+            return;
         }
-        else{
-            Debug.Log("ADEU");
+        else
+        {
+            timeVisual.SetText("Temps restant: " + (int)timer);
+
+            if (timer > 0)
+            {
+                timer -= Time.deltaTime;
+
+                HandleInput();
+                HandleSpawning();
+            }
+            else
+            {
+                Debug.Log("ADEU");
+            }
         }
     }
+
 
     void HandleSpawning()
     {
@@ -74,7 +86,7 @@ public class ComidaManager : MonoBehaviour
             {
                 player.money = 0;
             }
-            scoreVisual.SetText("Score: " + player.money);
+            scoreVisual.SetText("Puntuació: " + player.money);
             NextFood();
         }
 
@@ -82,7 +94,7 @@ public class ComidaManager : MonoBehaviour
         {
             Debug.Log("Has comido");
             player.money += currentFoodInstance.points;
-            scoreVisual.SetText("Score: " + player.money);
+            scoreVisual.SetText("Puntuació: " + player.money);
             NextFood();
         }
     }
