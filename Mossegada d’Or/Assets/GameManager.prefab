@@ -67,8 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebe4166d0769e8f43b3a1f6936d60eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameplayMusic: {fileID: 0}
-  gamblingMusic: {fileID: 0}
+  gameplayMusic: {fileID: 8300000, guid: 40246b2e6b5e3494abd4b794677e830f, type: 3}
+  gamblingMusic: {fileID: 8300000, guid: 09e2855fe5c83ca468093a50351bdedb, type: 3}
   gameplaySceneName: GameplayScene
   gamblingSceneName: GamblingScene
   volume: 0.3
@@ -87,7 +87,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -183,3 +183,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: MainMenuScene
   gameplay: MainGameScene
+  libro: {fileID: 0}
+  playButton: {fileID: 0}
+  menuButton: {fileID: 0}

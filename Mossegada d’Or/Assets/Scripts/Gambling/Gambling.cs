@@ -17,6 +17,10 @@ public class Gambling : MonoBehaviour
     public int pityThreshold = 10;      // after 10 fails, guarantee a new unlock
     private int spinsSinceLastNewUnlock = 0;
 
+    public GameObject lever;
+    private SpriteRenderer leverRenderer;
+    public Sprite leverUp;
+    public Sprite leverDown;
 
     [Header("UI")]
     public TextMeshProUGUI statusText;
@@ -38,6 +42,8 @@ public class Gambling : MonoBehaviour
     void Start()
     {
         statusText.text = $"Pren espai per girar ({spinCost} monedas)";
+        leverRenderer = lever.GetComponent<SpriteRenderer>();
+
     }
 
     public void OnSpin(InputAction.CallbackContext context)
@@ -58,6 +64,12 @@ public class Gambling : MonoBehaviour
     {
         isSpinning = true;
         float timer = 0f;
+
+        //BAJAR PALANCA DURANTE 0.5s
+        leverRenderer.sprite = leverDown;
+        yield return new WaitForSeconds(0.5f);
+        //SUBIR PALANCA
+        leverRenderer.sprite = leverUp;
 
         statusText.text = "Decidint...";
 

@@ -6,6 +6,7 @@ public class GamblingButtons : MonoBehaviour
     public string mainMenu;
     public string gameplay;
 
+
     public void LoadGame(){
         SceneManager.LoadScene(gameplay);
     }

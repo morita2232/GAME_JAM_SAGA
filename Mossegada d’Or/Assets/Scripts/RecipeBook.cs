@@ -9,10 +9,14 @@ public class RecipeBook : MonoBehaviour
     public TextMeshProUGUI posNombreDerecha;
     public TextMeshProUGUI posRecetaIzquierda;
     public TextMeshProUGUI posRecetaDerecha;
+    public UnityEngine.UI.Image posIzquierda;
+    public UnityEngine.UI.Image posDerecha;
+
 
     // Data is stored only in code
     private List<string> nombres;
     private List<string> recetas;
+    public List<Sprite> sprites;
 
     // index of the LEFT recipe on the current “page”
     private int currentIndex = 0;
@@ -57,27 +61,33 @@ public class RecipeBook : MonoBehaviour
 
     private void MostrarPagina()
     {
-        // Left side
+        // ----- LEFT PAGE -----
         posNombreIzquierda.text = nombres[currentIndex];
         posRecetaIzquierda.text = recetas[currentIndex];
+        posIzquierda.sprite = sprites[currentIndex];
 
-        // Right side (if there is a second item)
         int rightIndex = currentIndex + 1;
 
+        // ----- RIGHT PAGE -----
         if (rightIndex < nombres.Count)
         {
             posNombreDerecha.text = nombres[rightIndex];
             posRecetaDerecha.text = recetas[rightIndex];
+            posDerecha.sprite = sprites[rightIndex];
+
             posNombreDerecha.gameObject.SetActive(true);
             posRecetaDerecha.gameObject.SetActive(true);
+            posDerecha.gameObject.SetActive(true);
         }
         else
         {
-            // If there’s an odd number of recipes, hide the right page
+            // Hide only the right page when there is no second item
             posNombreDerecha.gameObject.SetActive(false);
             posRecetaDerecha.gameObject.SetActive(false);
+            posDerecha.gameObject.SetActive(false);
         }
     }
+
 }
 
 

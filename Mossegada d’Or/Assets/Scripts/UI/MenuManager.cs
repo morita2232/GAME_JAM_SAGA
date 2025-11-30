@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject instructionsPanel;
     [SerializeField] private GameObject creditsPanel;
+    public GameObject book;
 
     private void Start()
     {
@@ -22,6 +23,15 @@ public class MenuManager : MonoBehaviour
 
     // --- BUTTON FUNCTIONS ---
 
+    public void ShowBook()
+    {
+        book.SetActive(true);
+    }
+
+    public void closeBook()
+    {
+        book.SetActive(false);
+    }
     public void PlayGame()
     {
         SceneManager.LoadScene(gameplaySceneName);
