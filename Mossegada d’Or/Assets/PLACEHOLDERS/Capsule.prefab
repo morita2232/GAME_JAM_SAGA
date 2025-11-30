@@ -105,4 +105,4 @@ MonoBehaviour:
   id: 0
   alive: 0
   unlocked: 1
-  sprite: {fileID: 0}
+  sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}

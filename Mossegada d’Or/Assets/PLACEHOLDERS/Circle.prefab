@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: -5
   catalan: 0
-  id: 0
+  id: 1
   alive: 0
   unlocked: 1
-  sprite: {fileID: 0}
+  sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}

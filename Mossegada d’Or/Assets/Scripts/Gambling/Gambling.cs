@@ -14,6 +14,9 @@ public class Gambling : MonoBehaviour
     public InputAction spinAction;
     public int spinCost = 10;
     public float spinTime = 2f;
+    public int pityThreshold = 10;      // after 10 fails, guarantee a new unlock
+    private int spinsSinceLastNewUnlock = 0;
+
 
     [Header("UI")]
     public TextMeshProUGUI statusText;
@@ -58,37 +61,122 @@ public class Gambling : MonoBehaviour
 
         statusText.text = "Decidint...";
 
-        //Animacion de gambling
+        // Animación de gambling
         while (timer < spinTime)
         {
             for (int i = 0; i < comidas.Length; i++)
             {
                 int rand = Random.Range(0, gm.foods.Count);
                 var prefab = gm.foods[rand];
+                Debug.Log(prefab.name);
                 comidas[i].GetComponent<SpriteRenderer>().sprite = prefab.GetComponent<SpriteRenderer>().sprite;
             }
 
             timer += 0.1f;
             yield return new WaitForSeconds(0.1f);
-
         }
 
-        // Elegir resultado final
-        int finalRand = Random.Range(0, gm.foods.Count);
-        GameObject result = gm.foods[finalRand];
+        // Resultados finales normales
+        int[] finalResults = new int[comidas.Length];
 
-        // Desbloquear comida si no estaba desbloqueada
-        Comida comidaComp = result.GetComponent<Comida>();
-        if (comidaComp != null && !comidaComp.unlocked)
+        for (int i = 0; i < comidas.Length; i++)
         {
-            comidaComp.unlocked = true;
-            statusText.text = $"Nuevo desbloqueo: {result.name}";
+            finalResults[i] = Random.Range(0, gm.foods.Count);
+            var prefab = gm.foods[finalResults[i]];
+            comidas[i].GetComponent<SpriteRenderer>().sprite = prefab.GetComponent<SpriteRenderer>().sprite;
+        }
+
+        // ¿Coinciden todos?
+        bool allMatch = true;
+        for (int i = 1; i < finalResults.Length; i++)
+        {
+            if (finalResults[i] != finalResults[0])
+            {
+                allMatch = false;
+                break;
+            }
+        }
+
+        GameObject wonFood = null;
+        Comida comidaComp = null;
+        bool newUnlockThisSpin = false;
+
+        if (allMatch)
+        {
+            wonFood = gm.foods[finalResults[0]];
+            comidaComp = wonFood.GetComponent<Comida>();
+
+            if (comidaComp != null && !comidaComp.unlocked)
+            {
+                comidaComp.unlocked = true;
+                newUnlockThisSpin = true;
+                statusText.text = $"GANASTE: {wonFood.name} (nuevo!)";
+            }
+            else
+            {
+                statusText.text = $"GANASTE pero repetido: {wonFood.name}";
+            }
         }
         else
         {
-            statusText.text = $"Repetido: {result.name}";
+            statusText.text = "No has ganado, intenta otra vez!";
+        }
+
+        // --- SISTEMA DE PITY (RIG) ---
+
+        if (newUnlockThisSpin)
+        {
+            // reset contador si hubo nuevo desbloqueo
+            spinsSinceLastNewUnlock = 0;
+        }
+        else
+        {
+            spinsSinceLastNewUnlock++;
+
+            // si hemos fallado 'pityThreshold' veces seguidas, forzar nuevo desbloqueo
+            if (spinsSinceLastNewUnlock >= pityThreshold)
+            {
+                // buscar todas las comidas bloqueadas
+                List<int> lockedIndices = new List<int>();
+                for (int i = 0; i < gm.foods.Count; i++)
+                {
+                    var c = gm.foods[i].GetComponent<Comida>();
+                    if (c != null && !c.unlocked)
+                        lockedIndices.Add(i);
+                }
+
+                if (lockedIndices.Count > 0)
+                {
+                    // elegir una comida bloqueada al azar
+                    int forcedIndex = lockedIndices[Random.Range(0, lockedIndices.Count)];
+                    wonFood = gm.foods[forcedIndex];
+                    comidaComp = wonFood.GetComponent<Comida>();
+
+                    // marcar como desbloqueada
+                    comidaComp.unlocked = true;
+
+                    // mostrarla en los 3 slots para que se note el premio
+                    for (int i = 0; i < comidas.Length; i++)
+                    {
+                        comidas[i].GetComponent<SpriteRenderer>().sprite =
+                            wonFood.GetComponent<SpriteRenderer>().sprite;
+                    }
+
+                    statusText.text = $"¡SUERTE ASEGURADA! Desbloqueado: {wonFood.name}";
+                    newUnlockThisSpin = true;
+                    spinsSinceLastNewUnlock = 0;
+                }
+                else
+                {
+                    // no quedan comidas bloqueadas, ya lo tienes todo
+                    statusText.text = "¡Ya tienes todas las comidas desbloqueadas!";
+                    // podrías seguir dejando el contador como está, o resetearlo
+                    spinsSinceLastNewUnlock = 0;
+                }
+            }
         }
 
         isSpinning = false;
+
     }
 }
