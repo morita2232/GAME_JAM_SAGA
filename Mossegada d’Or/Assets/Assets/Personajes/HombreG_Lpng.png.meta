@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 65f80d844c2e83c42a4cc2056555cf74
+guid: 1752519ad18753c41b9a2e5ed38da1f0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7096565033371833238
-    second: HAMBURGUESA_0
+      213: 4914626984251170397
+    second: HombreG_Lpng_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HAMBURGUESA_0
+      name: HombreG_Lpng_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 7
-        width: 92
-        height: 92
+        x: 191
+        y: 3
+        width: 142
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a6ce96c83bfe38d90800000000000000
-      internalID: -7096565033371833238
+      spriteID: d5e17df0433443440800000000000000
+      internalID: 4914626984251170397
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HAMBURGUESA_0: -7096565033371833238
+      HombreG_Lpng_0: 4914626984251170397
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

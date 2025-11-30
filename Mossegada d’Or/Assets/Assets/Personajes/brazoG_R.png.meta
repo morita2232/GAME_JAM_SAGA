@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 864ff6e005a737e4f97071ce1367fc1a
+guid: d03fc397b22be27449440bd46fe5d655
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6444940296795206775
-    second: pizza_0
+      213: 6308068421263132823
+    second: brazoG_R_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pizza_0
+      name: brazoG_R_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 15
-        width: 94
-        height: 66
+        x: 747
+        y: 3
+        width: 110
+        height: 142
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98bcbe262f8fe86a0800000000000000
-      internalID: -6444940296795206775
+      spriteID: 7988f3cbec2ca8750800000000000000
+      internalID: 6308068421263132823
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pizza_0: -6444940296795206775
+      brazoG_R_0: 6308068421263132823
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

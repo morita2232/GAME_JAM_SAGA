@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 54265d6ccf254204097a653935ab223a
+guid: 4158644c4c5c59c4ea94e8c6888929b6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6555182894750123197
-    second: brazoD_L_0
+      213: 7483234719609423373
+    second: Panellets_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: brazoD_L_0
+      name: Panellets_0
       rect:
         serializedVersion: 2
-        x: 87
+        x: 1
         y: 3
-        width: 86
-        height: 66
+        width: 96
+        height: 92
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db44c47ac10b8fa50800000000000000
-      internalID: 6555182894750123197
+      spriteID: d068031645ac9d760800000000000000
+      internalID: 7483234719609423373
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      brazoD_L_0: 6555182894750123197
+      Panellets_0: 7483234719609423373
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3ab34c777d604644da7c4de1810fd288
+guid: aece9be6a5a788740b7296260e9dbdf2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6308068421263132823
-    second: brazoG_R_0
+      213: 3614956220987868048
+    second: CANELON_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: brazoG_R_0
+      name: CANELON_0
       rect:
         serializedVersion: 2
-        x: 747
-        y: 3
-        width: 110
-        height: 142
+        x: 1
+        y: 15
+        width: 99
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7988f3cbec2ca8750800000000000000
-      internalID: 6308068421263132823
+      spriteID: 0930296b787ea2230800000000000000
+      internalID: 3614956220987868048
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      brazoG_R_0: 6308068421263132823
+      CANELON_0: 3614956220987868048
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

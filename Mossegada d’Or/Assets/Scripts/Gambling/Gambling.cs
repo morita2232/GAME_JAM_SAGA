@@ -110,16 +110,16 @@ public class Gambling : MonoBehaviour
             {
                 comidaComp.unlocked = true;
                 newUnlockThisSpin = true;
-                statusText.text = $"GANASTE: {wonFood.name} (nuevo!)";
+                statusText.text = $"HAS GUANYAT: {wonFood.name} (NOU!)";
             }
             else
             {
-                statusText.text = $"GANASTE pero repetido: {wonFood.name}";
+                statusText.text = $"Ja el tens: {wonFood.name}";
             }
         }
         else
         {
-            statusText.text = "No has ganado, intenta otra vez!";
+            statusText.text = "No has guanyat, intenta de nou!";
         }
 
         // --- SISTEMA DE PITY (RIG) ---
@@ -162,14 +162,14 @@ public class Gambling : MonoBehaviour
                             wonFood.GetComponent<SpriteRenderer>().sprite;
                     }
 
-                    statusText.text = $"¡SUERTE ASEGURADA! Desbloqueado: {wonFood.name}";
+                    statusText.text = $"¡SORT ASSEGURADA! Desbloquejat: {wonFood.name}";
                     newUnlockThisSpin = true;
                     spinsSinceLastNewUnlock = 0;
                 }
                 else
                 {
                     // no quedan comidas bloqueadas, ya lo tienes todo
-                    statusText.text = "¡Ya tienes todas las comidas desbloqueadas!";
+                    statusText.text = "¡Ja tens tots els menjars desbloquejats!";
                     // podrías seguir dejando el contador como está, o resetearlo
                     spinsSinceLastNewUnlock = 0;
                 }

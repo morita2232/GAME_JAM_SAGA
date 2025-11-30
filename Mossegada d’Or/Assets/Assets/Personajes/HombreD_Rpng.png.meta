@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 9eb083009e2a11d41a4b9fdc9db32a84
+guid: e2b6745a57b5fc94f8837b746f9dc49d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4492888305309369482
-    second: BOTONES_0
-  - first:
-      213: 4098741438489882652
-    second: BOTONES_1
+      213: -8003213078243931287
+    second: HombreD_Rpng_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BOTONES_0
+      name: HombreD_Rpng_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 119
-        width: 71
-        height: 26
+        x: 699
+        y: 3
+        width: 122
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 67b378204ed06a1c0800000000000000
-      internalID: -4492888305309369482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BOTONES_1
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 80
-        width: 26
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c10fc5b4f97a1e830800000000000000
-      internalID: 4098741438489882652
+      spriteID: 96b8281bb10eee090800000000000000
+      internalID: -8003213078243931287
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BOTONES_0: -4492888305309369482
-      BOTONES_1: 4098741438489882652
+      HombreD_Rpng_0: -8003213078243931287
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

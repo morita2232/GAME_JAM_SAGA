@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8bf70109b6ad6a34da26c84b51a4aac4
+guid: 794e2f2e0590537499da1e2793960604
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7483234719609423373
-    second: Panellets_0
+      213: 1954834548078389153
+    second: HombreD_Lpng_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Panellets_0
+      name: HombreD_Lpng_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 583
         y: 3
-        width: 96
-        height: 92
+        width: 122
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d068031645ac9d760800000000000000
-      internalID: 7483234719609423373
+      spriteID: 1a7afd01aa7f02b10800000000000000
+      internalID: 1954834548078389153
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Panellets_0: 7483234719609423373
+      HombreD_Lpng_0: 1954834548078389153
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

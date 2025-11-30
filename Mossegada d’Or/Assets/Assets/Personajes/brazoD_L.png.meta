@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e5303b94fc4afe041aea31565fcc3142
+guid: 4aef99967712aa1418be8972da3d946e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4914626984251170397
-    second: HombreG_Lpng_0
+      213: 6555182894750123197
+    second: brazoD_L_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HombreG_Lpng_0
+      name: brazoD_L_0
       rect:
         serializedVersion: 2
-        x: 191
+        x: 87
         y: 3
-        width: 142
-        height: 110
+        width: 86
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5e17df0433443440800000000000000
-      internalID: 4914626984251170397
+      spriteID: db44c47ac10b8fa50800000000000000
+      internalID: 6555182894750123197
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HombreG_Lpng_0: 4914626984251170397
+      brazoD_L_0: 6555182894750123197
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

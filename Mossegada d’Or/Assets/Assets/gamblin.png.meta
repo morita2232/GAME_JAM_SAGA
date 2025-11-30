@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 18e85c3d5b23c884393d2da86f8163ea
+guid: 167e969ff6a66444f88db08821ed8d20
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2308555814903077555
-    second: brazoD_R_0
+      213: -4993349958096648752
+    second: gamblin_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: brazoD_R_0
+      name: gamblin_0
       rect:
         serializedVersion: 2
-        x: 211
-        y: 3
-        width: 86
-        height: 66
+        x: 0
+        y: 0
+        width: 296
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d452a84b7bc56ffd0800000000000000
-      internalID: -2308555814903077555
+      spriteID: 0d500744bae04bab0800000000000000
+      internalID: -4993349958096648752
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      brazoD_R_0: -2308555814903077555
+      gamblin_0: -4993349958096648752
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

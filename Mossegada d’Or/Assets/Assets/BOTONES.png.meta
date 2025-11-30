@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 569ffefaee2720248a1d21aac87f6fea
+guid: 8cf30ae6a6f78d64e94a017d504f74ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9170915543189363784
-    second: HombreG_Rpng_0
+      213: -4492888305309369482
+    second: BOTONES_0
+  - first:
+      213: 4098741438489882652
+    second: BOTONES_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,23 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HombreG_Rpng_0
+      name: BOTONES_0
       rect:
         serializedVersion: 2
-        x: 355
-        y: 3
-        width: 142
-        height: 110
+        x: 8
+        y: 119
+        width: 71
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 8, z: 8, w: 8}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67b378204ed06a1c0800000000000000
+      internalID: -4492888305309369482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOTONES_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 80
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84c19e0d813a54f70800000000000000
-      internalID: 9170915543189363784
+      spriteID: c10fc5b4f97a1e830800000000000000
+      internalID: 4098741438489882652
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d8bf68417aeaa8a4aa826e7c2f2c41c9
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HombreG_Rpng_0: 9170915543189363784
+      BOTONES_0: -4492888305309369482
+      BOTONES_1: 4098741438489882652
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

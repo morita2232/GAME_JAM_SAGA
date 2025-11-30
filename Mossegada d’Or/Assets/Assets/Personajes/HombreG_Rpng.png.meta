@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4121bd5dbbadde949aeb39a9f8d2074b
+guid: ae64973a075d2154aaf177306e0174b1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4993349958096648752
-    second: gamblin_0
+      213: 9170915543189363784
+    second: HombreG_Rpng_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gamblin_0
+      name: HombreG_Rpng_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 296
-        height: 312
+        x: 355
+        y: 3
+        width: 142
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0d500744bae04bab0800000000000000
-      internalID: -4993349958096648752
+      spriteID: 84c19e0d813a54f70800000000000000
+      internalID: 9170915543189363784
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gamblin_0: -4993349958096648752
+      HombreG_Rpng_0: 9170915543189363784
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
